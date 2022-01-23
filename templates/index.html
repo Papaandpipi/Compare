@@ -18,9 +18,17 @@
         <div class="container">
             <div class="section">
                 <form action="/" method="post">
-                    <input autocomplete="off" name="text1" placeholder="Text1" type="text">
-                    <input autocomplete="off" name="text2" placeholder="Text2" type="text">
-                    <input type="submit" value="Compare">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Original</label>
+                        <textarea name="text1" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Revised</label>
+                        <textarea name="text2" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Compare">
+                    </div>
                 </form>
             </div>
         </div>
