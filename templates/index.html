@@ -10,11 +10,15 @@
 
         <title>Compare</title>
         <link rel="stylesheet" href="static/styles.css">
+
     </head>
+
     <body>
-        <div class="header">
-            <h1>Blackliner</h1>
-        </div>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Blackliner</span>
+        </nav>
+
         <div class="container">
             <div class="section">
                 <form action="/" method="post">
@@ -22,26 +26,42 @@
                         <label for="exampleFormControlTextarea1">Original</label>
                         <textarea name="text1" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    <p></p>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Revised</label>
                         <textarea name="text2" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    <p></p>
                     <div>
-                        <input type="submit" value="Compare">
+                        <input class="btn btn-light" type="submit" value="Compare">
                     </div>
                 </form>
             </div>
         </div>
         
-        {% for i in result %}
-            {% if i[0] == '-' and i[-1] == '-' %}
-                <del>{{i[1:-1]}}</del>
-            {% elif i[0] == '+' and i[-1] == '+' %}
-                <b>{{i[1:-1]}}</b>
-            {% else %}
-                {{i}}
-            {% endif %}
-        {% endfor %}
-          
+        <p>See result here:</p>
+
+        <div class="output" id="output">
+            <button id="outputbutton" type="button" class="btn btn-outline-light" onclick="copyFunction()">Copy</button>
+            <p></p>
+            {% for i in result %}
+                {% if i[0] == '-' and i[-1] == '-' %}
+                    <del>{{i[1:-1]}}</del>
+                {% elif i[0] == '+' and i[-1] == '+' %}
+                    <b>{{i[1:-1]}}</b>
+                {% else %}
+                    {{i}}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <script>
+            function copyFunction() {
+            
+            // TODO: implement copyFunction
+
+            }
+        </script>
+
     </body>
 </html>
