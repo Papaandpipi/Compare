@@ -1,7 +1,4 @@
 
-title{
-    font-weight: bold;
-}
 
 del{
     color: red;
@@ -11,28 +8,15 @@ b{
     color: blue;
 }
 
-p{
-    margin-left: 6%;
-    margin-right: 8%;
-}
-
 .container {
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 10%;
     margin-top: 2%;
     margin-bottom: 2%;
+    padding-inline-end: 50px;
 }
 
 .navbar-brand{
     padding-left: 1%;
     font-size: x-large;
-}
-
-.output{
-    margin-left: 6%;
-    margin-right: 8%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    background-color: lightgrey;
 }
