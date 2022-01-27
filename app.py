@@ -23,11 +23,6 @@ def index():
         text1 = request.form.get("text1")
         text2 = request.form.get("text2")
 
-        #TODO call compare function from helpers
-
-        #s1 = "This is a very cold hot summer. How are you? I am no."
-        #s2 = "This is mildly cold winter. What are you? You are yes."
-        
         result = compare(text1, text2)
 
         return render_template("index.html", result = result)

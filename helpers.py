@@ -2,7 +2,7 @@ import difflib
 import re
 
 def tokenize(s):
-    return re.split('\s+', s)
+    return re.split('\s(?<!\n)', s)
 
 def untokenize(ts):
     return ' '.join(ts)
