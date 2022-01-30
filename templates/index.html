@@ -94,12 +94,26 @@
         <div class="container" id="output">
             {% for i in result %}
                 {% if i[0] == '-' and i[-1] == '-' %}
-                    <b>{{i[1:-1]}}</b>
+                    {% if '\n' in i %}
+                        <br>
+                        <del>{{i[1:-1]}}</del>
+                    {% else %}
+                        <del>{{i[1:-1]}}</del>
+                    {% endif %}
                 {% elif i[0] == '+' and i[-1] == '+' %}
-                    <b>{{i[1:-1]}}</b>
-                    <p></p>
+                    {% if '\n' in i %}
+                        <br>
+                        <b>{{i[1:-1]}}</b>
+                    {% else %}
+                        <b>{{i[1:-1]}}</b>
+                    {% endif %}
                 {% else %}
-                    {{i}}
+                    {% if '\n' in i %}
+                        <br>
+                        {{i}}
+                    {% else %}
+                        {{i}}
+                    {% endif %}
                 {% endif %}
             {% endfor %}
             <p></p>
