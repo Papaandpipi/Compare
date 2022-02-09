@@ -1,4 +1,9 @@
 Flask
+Flask-Session
 Jinja2
 difflib
 re
+gunicorn
+psycopg2
+requests
+
