@@ -3,4 +3,5 @@ Flask-Session
 gunicorn
 psycopg2
 requests
-
+difflib
+re
