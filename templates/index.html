@@ -28,36 +28,9 @@
                     range.selectNode(document.getElementById(containerid));
                     window.getSelection().addRange(range);
                     document.execCommand("copy");
-                    // TODO: develop a better alert
-                    //alert("Text has been copied")
+
                 }
             }
-
-            // TODO: "copied!" tooltip
-            // $('#outputbutton').tooltip({
-            //     trigger: 'click',
-            //     placement: 'right'
-            // });
-
-            // function setTooltip(btn, message) {
-            //     btn.tooltip('hide')
-            //         .attr('data-original-title', message)
-            //         .tooltip('show');
-            // }
-
-            // function hideTooltip(btn) {
-            //     setTimeout(function() {
-            //         btn.tooltip('hide');
-            //     }, 1000);
-            // }
-
-            // var clipboard = new Clipboard('.test');
-
-            // clipboard.on('success', function(e) {
-            //         var btn = $(e.trigger);
-            //     setTooltip(btn, 'Copied');
-            //     hideTooltip(btn);
-            // });
 
         </script>
 

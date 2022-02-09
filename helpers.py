@@ -4,9 +4,6 @@ import re
 def tokenize(s):
     return re.split('\s(?<!\n)', s)
 
-def untokenize(ts):
-    return ' '.join(ts)
-
 def compare(s1, s2):
     l1 = tokenize(s1)
     l2 = tokenize(s2)
